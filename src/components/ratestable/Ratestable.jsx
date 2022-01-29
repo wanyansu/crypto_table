@@ -3,38 +3,35 @@ import axios from 'axios';
 
 const Ratestable = () => {
   const [currencies, setCurrencies] = useState([])
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
+    setLoading(true)
     const fetchCurrencies = async () => {
       const res = await axios.get('https://api.coingecko.com/api/v3/exchange_rates')
       setCurrencies(res.data.rates)
+      setLoading(false)
     }
     fetchCurrencies()
   }, [])
-  console.log(currencies.btc.name);
+  if (loading) {
+    return <h1>Loading...</h1>
+  }
+  if (!currencies) {
+    return <h1>No currencies to show</h1>
+  }
+  const { name, unit, value, type } = currencies.btc
+  console.log(currencies);
   return (
+    <>
     <div className="mainPage">
       <div className="tableBlock">
-        <table className="mainTable">
-          <thead>
-            <tr>
-              <th>name</th>
-              <th>type</th>
-              <th>unit</th>
-              <th>value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td></td>
-              <td>crypto</td>
-              <td>BTC</td>
-              <td>1.0</td>
-            </tr>
-          </tbody>
-        </table>
+          <p>
+          {name}, {unit}, {value}, {type}
+          </p>
       </div>
     </div>
+    </>
   )
 };
 
