@@ -1,0 +1,47 @@
+.navbar {
+    display: flex;
+    background-color:#41436A;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    z-index: 999;
+    height: 50px;
+}
+
+.topLeft,
+.topRight {
+    flex: 6;
+    display: flex;
+    align-items: center;
+}
+
+.topLeft {
+    justify-content: center;
+}
+
+.topRight {
+    justify-content: end;
+}
+
+.topIcon {
+    color: white;
+    margin-right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.navList {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-right: 50px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
