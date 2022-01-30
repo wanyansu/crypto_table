@@ -19,9 +19,6 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="topRight">
-        <i className="fas fa-bars topIcon"></i>
-      </div>
     </nav>
   )
 };

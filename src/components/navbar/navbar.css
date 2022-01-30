@@ -1,6 +1,6 @@
 .navbar {
     display: flex;
-    background-color:#41436A;
+    background-color:#141414;
     position: sticky;
     top: 0;
     opacity: 0.9;
@@ -9,31 +9,10 @@
     height: 50px;
 }
 
-.topLeft,
-.topRight {
+.topLeft {
     flex: 6;
     display: flex;
-    align-items: center;
-}
-
-.topLeft {
-    justify-content: center;
-}
-
-.topRight {
-    justify-content: end;
-}
-
-.topIcon {
-    color: white;
-    margin-right: 20px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.topIcon:hover {
-    color:#eba060;
+    justify-content: start;
 }
 
 .navList {
@@ -45,7 +24,7 @@
 }
 
 .nav-item {
-    margin-right: 50px;
+    margin: auto 60px;
     color: #fff;
     font-size: 18px;
     font-weight: 300;
@@ -55,4 +34,15 @@
 
 .nav-item:hover {
     color: #eba060;
+}
+
+@media screen and (max-width:768px) {
+    .nav-item {
+        margin: auto 20px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 200;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
 }

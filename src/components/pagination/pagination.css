@@ -1,0 +1,23 @@
+.pagination{
+    display: flex;
+    margin: 15px auto;
+    align-items:center;
+}
+
+.page-item {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.page-link {
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left:10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.page-link:hover {
+    color: #eba060;
+}

@@ -5,11 +5,11 @@ const Entry = ({ currencies }) => {
     return (
         <>
         {currencies.map( (currency) => (
-            <tr className="tableRow">
-               <td className="tableData">{currency.name}</td> 
-               <td className="tableData">{currency.type}</td> 
-               <td className="tableData">{currency.unit}</td> 
-               <td className="tableData">{currency.value}</td> 
+            <tr>
+               <td className="column1">{currency.name}</td> 
+               <td className="column2">{currency.type}</td> 
+               <td className="column3">{currency.unit}</td> 
+               <td className="column4">{currency.value}</td> 
             </tr>
         ))}
         </>
