@@ -4,7 +4,7 @@ import './navbar.css'
 
 const Navbar = () => {
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <div className="topLeft">
         <ul className="navList">
           <li className="nav-item">
@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="topRight">
         <i className="fas fa-bars topIcon"></i>
       </div>
-    </div>
+    </nav>
   )
 };
 

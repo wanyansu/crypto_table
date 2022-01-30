@@ -3,6 +3,7 @@
     background-color:#41436A;
     position: sticky;
     top: 0;
+    opacity: 0.9;
     align-items: center;
     z-index: 999;
     height: 50px;
@@ -28,6 +29,11 @@
     margin-right: 20px;
     font-size: 20px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.topIcon:hover {
+    color:#eba060;
 }
 
 .navList {
@@ -44,4 +50,9 @@
     font-size: 18px;
     font-weight: 300;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+    color: #eba060;
 }

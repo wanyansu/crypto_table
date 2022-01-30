@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Entry from '../entry/Entry'
+import Loader from '../loader/Loader'
+import './ratestable.css'
+
 
 const Ratestable = () => {
   const [currencies, setCurrencies] = useState([])
@@ -19,16 +22,20 @@ const Ratestable = () => {
     fetchCurrencies()
   }, [])
   if (loading) {
-    return <h1>Loading...</h1>
+    return <div className="mainTable"><Loader /></div> 
   }
   if (!currencies) {
-    return <h1>No currencies to show</h1>
+    return (
+      <div className="mainTable">
+        <h1>No currencies to show</h1>
+      </div>
+          )
   }
   console.log(currencies);
   return (
     <div className="mainTable">
       <table>
-        <thead>
+        <thead className="tableHead">
           <tr>
             <th>Name</th>
             <th>Type</th>
